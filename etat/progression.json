@@ -1,0 +1,47 @@
+{
+  "$schema_version": "1.0",
+  "_contrat": {
+    "phase": "entier 0-3. 0 = calibration non faite. Voir CLAUDE.md §3.",
+    "session_courante": "entier. Incrémenté à chaque séance terminée.",
+    "niveau_estime": "objet. Estimation, jamais un test certifié. Champ 'fiabilite' obligatoire.",
+    "notions": "tableau. statut ∈ {en_cours, acquise, reportee}. Voir CLAUDE.md §4 pour les seuils.",
+    "controles": "sessions auxquelles le contrôle différé est dû. Calculé à l'introduction.",
+    "lecture_en_cours": "null ou objet décrivant le texte travaillé en lecture parallèle.",
+    "regle": "Aucun champ ne doit être supprimé. Un champ inconnu est une erreur, pas une extension."
+  },
+
+  "phase": 0,
+  "session_courante": 0,
+
+  "niveau_estime": {
+    "lecture": null,
+    "vocabulaire_general": null,
+    "grammaire": null,
+    "fiabilite": "non evalue",
+    "note": "Rempli par le skill calibration. Aucune valeur ne doit être devinée."
+  },
+
+  "notions": [],
+
+  "lecture_en_cours": null,
+
+  "lexiques": {
+    "general": "lexique/general.md",
+    "jdr": "lexique/jdr.md",
+    "cuisine": "lexique/cuisine.md"
+  },
+
+  "compteurs": {
+    "mots_lexique_general": 0,
+    "mots_lexique_jdr": 0,
+    "mots_lexique_cuisine": 0,
+    "erreurs_consignees": 0
+  },
+
+  "derniere_session": {
+    "numero": null,
+    "objet": null,
+    "resultat": null,
+    "a_reprendre": []
+  }
+}
